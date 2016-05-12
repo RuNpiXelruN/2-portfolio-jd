@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <%= image_tag @portfolio_item.image, class: 'img-rounded', width: '100%', alt: @portfolio_item.caption, title: @portfolio_item.caption %>
+        <h4>
+          <%= @portfolio_item.caption %>
+        </h4>
+        <p>
+          <%= @portfolio_item.description %>
+        </p>
+        <%= link_to 'Edit', edit_portfolio_item_path(@portfolio_item) %>
+      </div>
+    </div>
+  </div>
+</div>
