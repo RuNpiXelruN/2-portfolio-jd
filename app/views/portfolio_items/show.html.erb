@@ -16,3 +16,13 @@
     </div>
   </div>
 </div>
+
+<% @chipmonks.each_with_index do |chipmonk, index| %>
+  <div class="item">
+    <%= image_tag chipmonk %>
+    <div class="carousel-caption">
+      ...
+    </div>
+  </div>
+  ...
+  <% end %>

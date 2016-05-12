@@ -10,6 +10,12 @@ class PortfolioItemsController < ApplicationController
   # GET /portfolio_items/1
   # GET /portfolio_items/1.json
   def show
+    @portfolios = PortfolioItem.all
+    @chipmonks = [
+      "http://welcomewildlife.com/wp-content/uploads/2015/05/Chipmunk-e1432492240819.jpg",
+      "http://media.thelisttv.com/photo/2015/07/23/16x9/Jedi_Chipmunks_Epic_Lightsaber_Battle_3213870000_21958131_ver1.0_640_480.jpg",
+      "http://orig09.deviantart.net/e99c/f/2009/147/2/3/fat_chipmunk_by_firegal6.jpg"
+    ]
   end
 
   # GET /portfolio_items/new
