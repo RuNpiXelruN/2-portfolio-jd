@@ -9,6 +9,6 @@ class EnquiryMailer < ApplicationMailer
 
   def received(enquiry)
     @enquiry = Enquiry.find(enquiry.id)
-    mail to: "pete@coderfactory.com", subject: 'An enquiry has been recieved'
+    mail to: "justindavidson23@gmail.com", subject: 'An enquiry has been recieved'
   end
 end
