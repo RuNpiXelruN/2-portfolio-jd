@@ -1,9 +1,24 @@
-<nav class="navbar navbar-inverse">
+<!-- <nav class="navbar navbar-inverse">
   <div class="container">
     <ul class="nav navbar-nav">
         <li><%= link_to 'Sign in', new_user_session_path %></li>
         <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
         <li><%= link_to 'Contact me', contact_path %></li>
+    </ul>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <ul class="nav navbar-nav">
+        <li><%= link_to "Home", root_path %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to 'Contact me', contact_path %></li>
+      <% else %>
+        <li><%= link_to 'Admin', new_user_session_path %></li>
+        <li><%= link_to 'Contact me', contact_path %></li>
+      <% end %>
     </ul>
   </div>
 </nav>
