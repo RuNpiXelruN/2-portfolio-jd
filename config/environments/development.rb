@@ -40,9 +40,9 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
+    address:              'smtp.mailgun.org',
     port:                 587,
-    domain:               'example.com',
+    domain:               ENV['MAILGUN_DOMAIN'],
     user_name:            ENV['MAILGUN_USERNAME'],
     password:             ENV['MAILGUN_PASSWORD'],
     authentication:       'plain',
